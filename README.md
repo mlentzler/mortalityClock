@@ -16,8 +16,8 @@ I built this website to serve as the **homepage** of my browser, reminding me ev
 
 ## Try it yourself
 
-You can try out the Mortality Clock [here](https://mlentzler.github.io/mortalityClock/) or by visiting the domain:  
-[https://mlentzler.github.io/mortalityClock/](https://mlentzler.github.io/mortalityClock/).  
+You can try out the Mortality Clock [here](https://mortalityclock.lentzler.com) or by visiting the domain:  
+[https://mortalityclock.lentzler.com](https://mortalityclock.lentzler.com).  
 Simply enter your birthdate and see how it works! 🚀
 
 
@@ -43,7 +43,7 @@ Simply enter your birthdate and see how it works! 🚀
 4. Select the **General** section (2nd in list).
 5. Under **Homepage and new windows**, select **Custom URLs...**.
 6. Enter the following URL:
-   `https://mlentzler.github.io/mortalityClock/`
+   `https://mortalityclock.lentzler.com`
 7. Close the settings tab. Your homepage is now set!
 
 ---
@@ -53,7 +53,7 @@ Simply enter your birthdate and see how it works! 🚀
 2. Click on **Safari** in the top menu bar and select **Preferences**.
 3. In the **General** tab, locate the **Homepage** field.
 4. Enter the following URL in the field:
-   `https://mlentzler.github.io/mortalityClock/`
+   `https://mortalityclock.lentzler.com`
 5. Close the **Preferences** window. Safari will now load the Mortality Clock as your homepage on startup.
 
 ---
