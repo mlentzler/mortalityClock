@@ -1,4 +1,3 @@
-
 .age-container {
   display: flex;
   align-items: flex-start;
@@ -13,13 +12,13 @@
 #ageText {
   font-size: 2rem;
   margin-bottom: -1rem;
-  color: grey;
+  color: var(--subtext-color);
 }
 
 #year {
   font-size: 6rem;  
   margin-top: 0;  
-
+  color: var(--text-color);
 }
 
 #fractional {
@@ -29,10 +28,11 @@
   width: 19rem;
   text-align: left;  
   overflow: hidden; 
+  color: var(--text-color);
 }
 
 #year, #fractional {
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+  text-shadow: var(--text-shadow);
 }
 
 #resetButton {
@@ -40,40 +40,15 @@
   bottom: 20px; 
   right: 20px; 
   background-color: transparent;  
-  color: white;  
+  color: var(--text-color);  
   border: none;
   font-size: 12px;  
   cursor: pointer;
   transition: all 0.3s ease;
+  line-height: 1;
 }
 
 #resetButton:hover {
-  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
-}
-
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: white;  
-    color: black;  
-  }
-
-  #ageText {
-    font-size: 2rem;
-    margin-bottom: -1rem;
-    color: grey;
-  }
-
-  #year, #fractional {
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3);  
-  }
-
-  #resetButton {
-    color: black;  
-  }
-
-  #resetButton:hover {
-    text-shadow: 0 0 10px black, 0 0 20px black, 0 0 30px black; 
-  }
+  text-shadow: var(--text-shadow);
+  filter: brightness(1.2);
 }

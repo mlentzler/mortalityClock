@@ -1,11 +1,23 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-color: #242424;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --accent-color: #646cff;
+  --accent-hover: #535bf2;
+  --button-bg: #1a1a1a;
+  --button-border: transparent;
+  --text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+  --input-bg: rgba(128, 128, 128, 0.3);
+  --label-color: white;
+  --subtext-color: grey;
+
+  font-family: var(--font-family);
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,13 +25,46 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+[data-theme='catppuccin'] {
+  --font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  --bg-color: #303446; /* Base (Frappe) */
+  --text-color: #c6d0f5; /* Text (Frappe) */
+  --accent-color: #8caaee; /* Blue (Frappe) */
+  --accent-hover: #85c1dc; /* Sapphire (Frappe) */
+  --button-bg: #414559; /* Surface0 (Frappe) */
+  --button-border: #626880; /* Surface2 (Frappe) */
+  --text-shadow: 0 0 8px rgba(140, 170, 238, 0.5), 0 0 15px rgba(140, 170, 238, 0.3);
+  --input-bg: #414559;
+  --label-color: #f2d5cf; /* Rosewater (Frappe) */
+  --subtext-color: #a5adce; /* Subtext0 (Frappe) */
+  
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme='catppuccin'] {
+    --bg-color: #eff1f5; /* Base (Latte) */
+    --text-color: #4c4f69; /* Text (Latte) */
+    --accent-color: #1e66f5; /* Blue (Latte) */
+    --accent-hover: #209fb5; /* Sapphire (Latte) */
+    --button-bg: #e6e9ef; /* Mantle (Latte) */
+    --button-border: #ccd0da; /* Surface2 (Latte) */
+    --text-shadow: 0 0 8px rgba(30, 102, 245, 0.2), 0 0 15px rgba(30, 102, 245, 0.1);
+    --input-bg: #ccd0da;
+    --label-color: #dc8a78; /* Rosewater (Latte) */
+    --subtext-color: #6c6f85; /* Subtext0 (Latte) */
+    
+    color-scheme: light;
+  }
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--accent-color);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--accent-hover);
 }
 
 body {
@@ -28,6 +73,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 h1 {
@@ -37,17 +83,23 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid var(--button-border);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-bg);
+  color: var(--text-color);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
+
+input, select, textarea {
+  font-family: inherit;
+}
+
 button:hover {
-  border-color: #646cff;
+  border-color: var(--accent-color);
 }
 button:focus,
 button:focus-visible {
@@ -55,14 +107,13 @@ button:focus-visible {
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  :root:not([data-theme='catppuccin']) {
+    --bg-color: #ffffff;
+    --text-color: #213547;
+    --accent-hover: #747bff;
+    --button-bg: #f9f9f9;
+    --text-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3);
+    --input-bg: rgba(200, 200, 200, 0.3);
+    --label-color: black;
   }
 }

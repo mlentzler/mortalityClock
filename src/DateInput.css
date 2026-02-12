@@ -12,78 +12,43 @@ form {
 
 #InputLabel {
   font-size: 1.5rem;
-  color: white;
-  text-shadow:  0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+  color: var(--label-color);
+  text-shadow: var(--text-shadow);
 }
 
 #dateInput {
   font-size: 1.2rem;
   padding: 0.5rem;
-  border: none;
+  border: 1px solid var(--button-border);
   border-radius: 5px;
-  background-color: rgba(128, 128, 128, 0.3);  
-  color: white; 
+  background-color: var(--input-bg);  
+  color: var(--text-color); 
   outline: none; 
+  font-family: inherit;
 }
 
 #dateInput:focus {
-  box-shadow: 0 0 8px rgba(128, 128, 128, 0.7), 0 0 15px rgba(128, 128, 128, 0.5);  
-  background-color: rgba(128, 128, 128, 0.4); 
+  border-color: var(--accent-color);
+  box-shadow: var(--text-shadow);
 }
 
 #startButton {
   font-size: 1rem;
   padding: 0.5rem 1rem;
-  border: none;
+  border: 1px solid var(--button-border);
   border-radius: 5px;
-  background-color: rgba(128, 128, 128, 0.6);  
-  color: white;
+  background-color: var(--button-bg);  
+  color: var(--text-color);
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 0 4px rgba(128, 128, 128, 0.5), 0 0 8px rgba(128, 128, 128, 0.3);
+  font-family: inherit;
 }
 
 #startButton:hover {
-  box-shadow: 0 0 8px rgba(128, 128, 128, 0.7), 0 0 15px rgba(128, 128, 128, 0.5); 
+  border-color: var(--accent-color);
+  box-shadow: var(--text-shadow);
 }
 
 #startButton:active {
-  box-shadow: 0 0 10px rgba(128, 128, 128, 0.8), 0 0 20px rgba(128, 128, 128, 0.6);
-}
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-
-  form {
-    background-color: white;
-  }
-
-  #InputLabel {
-    color: black;
-    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  #dateInput {
-    background-color: rgba(200, 200, 200, 0.3);
-    color: black;
-  }
-
-  #dateInput:focus {
-    box-shadow: 0 0 8px rgba(128, 128, 128, 0.7), 0 0 15px rgba(128, 128, 128, 0.5);  
-    background-color: rgba(200, 200, 200, 0.4); 
-  }
-
-  #startButton {
-    background-color: rgba(200, 200, 200, 0.6);  
-    color: black;
-    box-shadow: 0 0 4px rgba(128, 128, 128, 0.5), 0 0 8px rgba(128, 128, 128, 0.3);
-  }
-
-  #startButton:hover {
-    box-shadow: 0 0 8px rgba(128, 128, 128, 0.7), 0 0 15px rgba(128, 128, 128, 0.5); 
-  }
-
-  #startButton:active {
-    box-shadow: 0 0 10px rgba(128, 128, 128, 0.8), 0 0 20px rgba(128, 128, 128, 0.6);
-  }
+  transform: scale(0.98);
 }
